@@ -2,11 +2,8 @@ import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
-interface ContactFormProps {
-  apiUrl: string;
-}
-
-const ContactForm: React.FC<ContactFormProps> = ({ apiUrl }) => {
+const ContactForm = () => {
+  const apiUrl = "http://localhost:8001/api/contact";
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
@@ -50,7 +47,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ apiUrl }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form data-testid="form" onSubmit={handleSubmit}>
       <TextField
         label="Name"
         type="text"
@@ -60,6 +57,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ apiUrl }) => {
         required
         fullWidth
         margin="normal"
+        data-testid="name"
       />
 
       <TextField
@@ -71,6 +69,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ apiUrl }) => {
         required
         fullWidth
         margin="normal"
+        data-testid="email"
       />
 
       <TextField
@@ -82,6 +81,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ apiUrl }) => {
         required
         fullWidth
         margin="normal"
+        data-testid="subject"
       />
 
       <TextField
@@ -94,6 +94,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ apiUrl }) => {
         margin="normal"
         multiline
         rows={4}
+        data-testid="message"
       />
 
       <Button

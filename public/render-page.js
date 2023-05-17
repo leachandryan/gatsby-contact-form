@@ -43740,7 +43740,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const Layout = props => {
+var Layout = function Layout(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_material_ui_core_CssBaseline__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, props.children));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Layout);
@@ -43759,6 +43759,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   apiRunner: () => (/* binding */ apiRunner),
 /* harmony export */   apiRunnerAsync: () => (/* binding */ apiRunnerAsync)
 /* harmony export */ });
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return e; }; var t, e = {}, r = Object.prototype, n = r.hasOwnProperty, o = Object.defineProperty || function (t, e, r) { t[e] = r.value; }, i = "function" == typeof Symbol ? Symbol : {}, a = i.iterator || "@@iterator", c = i.asyncIterator || "@@asyncIterator", u = i.toStringTag || "@@toStringTag"; function define(t, e, r) { return Object.defineProperty(t, e, { value: r, enumerable: !0, configurable: !0, writable: !0 }), t[e]; } try { define({}, ""); } catch (t) { define = function define(t, e, r) { return t[e] = r; }; } function wrap(t, e, r, n) { var i = e && e.prototype instanceof Generator ? e : Generator, a = Object.create(i.prototype), c = new Context(n || []); return o(a, "_invoke", { value: makeInvokeMethod(t, r, c) }), a; } function tryCatch(t, e, r) { try { return { type: "normal", arg: t.call(e, r) }; } catch (t) { return { type: "throw", arg: t }; } } e.wrap = wrap; var h = "suspendedStart", l = "suspendedYield", f = "executing", s = "completed", y = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var p = {}; define(p, a, function () { return this; }); var d = Object.getPrototypeOf, v = d && d(d(values([]))); v && v !== r && n.call(v, a) && (p = v); var g = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(p); function defineIteratorMethods(t) { ["next", "throw", "return"].forEach(function (e) { define(t, e, function (t) { return this._invoke(e, t); }); }); } function AsyncIterator(t, e) { function invoke(r, o, i, a) { var c = tryCatch(t[r], t, o); if ("throw" !== c.type) { var u = c.arg, h = u.value; return h && "object" == _typeof(h) && n.call(h, "__await") ? e.resolve(h.__await).then(function (t) { invoke("next", t, i, a); }, function (t) { invoke("throw", t, i, a); }) : e.resolve(h).then(function (t) { u.value = t, i(u); }, function (t) { return invoke("throw", t, i, a); }); } a(c.arg); } var r; o(this, "_invoke", { value: function value(t, n) { function callInvokeWithMethodAndArg() { return new e(function (e, r) { invoke(t, n, e, r); }); } return r = r ? r.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); } }); } function makeInvokeMethod(e, r, n) { var o = h; return function (i, a) { if (o === f) throw Error("Generator is already running"); if (o === s) { if ("throw" === i) throw a; return { value: t, done: !0 }; } for (n.method = i, n.arg = a;;) { var c = n.delegate; if (c) { var u = maybeInvokeDelegate(c, n); if (u) { if (u === y) continue; return u; } } if ("next" === n.method) n.sent = n._sent = n.arg;else if ("throw" === n.method) { if (o === h) throw o = s, n.arg; n.dispatchException(n.arg); } else "return" === n.method && n.abrupt("return", n.arg); o = f; var p = tryCatch(e, r, n); if ("normal" === p.type) { if (o = n.done ? s : l, p.arg === y) continue; return { value: p.arg, done: n.done }; } "throw" === p.type && (o = s, n.method = "throw", n.arg = p.arg); } }; } function maybeInvokeDelegate(e, r) { var n = r.method, o = e.iterator[n]; if (o === t) return r.delegate = null, "throw" === n && e.iterator["return"] && (r.method = "return", r.arg = t, maybeInvokeDelegate(e, r), "throw" === r.method) || "return" !== n && (r.method = "throw", r.arg = new TypeError("The iterator does not provide a '" + n + "' method")), y; var i = tryCatch(o, e.iterator, r.arg); if ("throw" === i.type) return r.method = "throw", r.arg = i.arg, r.delegate = null, y; var a = i.arg; return a ? a.done ? (r[e.resultName] = a.value, r.next = e.nextLoc, "return" !== r.method && (r.method = "next", r.arg = t), r.delegate = null, y) : a : (r.method = "throw", r.arg = new TypeError("iterator result is not an object"), r.delegate = null, y); } function pushTryEntry(t) { var e = { tryLoc: t[0] }; 1 in t && (e.catchLoc = t[1]), 2 in t && (e.finallyLoc = t[2], e.afterLoc = t[3]), this.tryEntries.push(e); } function resetTryEntry(t) { var e = t.completion || {}; e.type = "normal", delete e.arg, t.completion = e; } function Context(t) { this.tryEntries = [{ tryLoc: "root" }], t.forEach(pushTryEntry, this), this.reset(!0); } function values(e) { if (e || "" === e) { var r = e[a]; if (r) return r.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) { var o = -1, i = function next() { for (; ++o < e.length;) if (n.call(e, o)) return next.value = e[o], next.done = !1, next; return next.value = t, next.done = !0, next; }; return i.next = i; } } throw new TypeError(_typeof(e) + " is not iterable"); } return GeneratorFunction.prototype = GeneratorFunctionPrototype, o(g, "constructor", { value: GeneratorFunctionPrototype, configurable: !0 }), o(GeneratorFunctionPrototype, "constructor", { value: GeneratorFunction, configurable: !0 }), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, u, "GeneratorFunction"), e.isGeneratorFunction = function (t) { var e = "function" == typeof t && t.constructor; return !!e && (e === GeneratorFunction || "GeneratorFunction" === (e.displayName || e.name)); }, e.mark = function (t) { return Object.setPrototypeOf ? Object.setPrototypeOf(t, GeneratorFunctionPrototype) : (t.__proto__ = GeneratorFunctionPrototype, define(t, u, "GeneratorFunction")), t.prototype = Object.create(g), t; }, e.awrap = function (t) { return { __await: t }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, c, function () { return this; }), e.AsyncIterator = AsyncIterator, e.async = function (t, r, n, o, i) { void 0 === i && (i = Promise); var a = new AsyncIterator(wrap(t, r, n, o), i); return e.isGeneratorFunction(r) ? a : a.next().then(function (t) { return t.done ? t.value : a.next(); }); }, defineIteratorMethods(g), define(g, u, "Generator"), define(g, a, function () { return this; }), define(g, "toString", function () { return "[object Generator]"; }), e.keys = function (t) { var e = Object(t), r = []; for (var n in e) r.push(n); return r.reverse(), function next() { for (; r.length;) { var t = r.pop(); if (t in e) return next.value = t, next.done = !1, next; } return next.done = !0, next; }; }, e.values = values, Context.prototype = { constructor: Context, reset: function reset(e) { if (this.prev = 0, this.next = 0, this.sent = this._sent = t, this.done = !1, this.delegate = null, this.method = "next", this.arg = t, this.tryEntries.forEach(resetTryEntry), !e) for (var r in this) "t" === r.charAt(0) && n.call(this, r) && !isNaN(+r.slice(1)) && (this[r] = t); }, stop: function stop() { this.done = !0; var t = this.tryEntries[0].completion; if ("throw" === t.type) throw t.arg; return this.rval; }, dispatchException: function dispatchException(e) { if (this.done) throw e; var r = this; function handle(n, o) { return a.type = "throw", a.arg = e, r.next = n, o && (r.method = "next", r.arg = t), !!o; } for (var o = this.tryEntries.length - 1; o >= 0; --o) { var i = this.tryEntries[o], a = i.completion; if ("root" === i.tryLoc) return handle("end"); if (i.tryLoc <= this.prev) { var c = n.call(i, "catchLoc"), u = n.call(i, "finallyLoc"); if (c && u) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } else if (c) { if (this.prev < i.catchLoc) return handle(i.catchLoc, !0); } else { if (!u) throw Error("try statement without catch or finally"); if (this.prev < i.finallyLoc) return handle(i.finallyLoc); } } } }, abrupt: function abrupt(t, e) { for (var r = this.tryEntries.length - 1; r >= 0; --r) { var o = this.tryEntries[r]; if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) { var i = o; break; } } i && ("break" === t || "continue" === t) && i.tryLoc <= e && e <= i.finallyLoc && (i = null); var a = i ? i.completion : {}; return a.type = t, a.arg = e, i ? (this.method = "next", this.next = i.finallyLoc, y) : this.complete(a); }, complete: function complete(t, e) { if ("throw" === t.type) throw t.arg; return "break" === t.type || "continue" === t.type ? this.next = t.arg : "return" === t.type ? (this.rval = this.arg = t.arg, this.method = "return", this.next = "end") : "normal" === t.type && e && (this.next = e), y; }, finish: function finish(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.finallyLoc === t) return this.complete(r.completion, r.afterLoc), resetTryEntry(r), y; } }, "catch": function _catch(t) { for (var e = this.tryEntries.length - 1; e >= 0; --e) { var r = this.tryEntries[e]; if (r.tryLoc === t) { var n = r.completion; if ("throw" === n.type) { var o = n.arg; resetTryEntry(r); } return o; } } throw Error("illegal catch attempt"); }, delegateYield: function delegateYield(e, r, n) { return this.delegate = { iterator: values(e), resultName: r, nextLoc: n }, "next" === this.method && (this.arg = t), y; } }, e; }
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 var plugins = [{
   name: 'gatsby-plugin-react-helmet',
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-react-helmet/gatsby-ssr */ "./node_modules/gatsby-plugin-react-helmet/gatsby-ssr.js"),
@@ -43811,37 +43818,37 @@ var plugins = [{
 //   },
 // ]
 
-const apis = __webpack_require__(/*! ./api-ssr-docs */ "./.cache/api-ssr-docs.js");
+var apis = __webpack_require__(/*! ./api-ssr-docs */ "./.cache/api-ssr-docs.js");
 function augmentErrorWithPlugin(plugin, err) {
-  if (plugin.name !== `default-site-plugin`) {
+  if (plugin.name !== "default-site-plugin") {
     // default-site-plugin is user code and will print proper stack trace,
     // so no point in annotating error message pointing out which plugin is root of the problem
-    err.message += ` (from plugin: ${plugin.name})`;
+    err.message += " (from plugin: ".concat(plugin.name, ")");
   }
   throw err;
 }
 function apiRunner(api, args, defaultReturn, argTransform) {
   if (!apis[api]) {
-    console.log(`This API doesn't exist`, api);
+    console.log("This API doesn't exist", api);
   }
-  const results = [];
-  plugins.forEach(plugin => {
-    const apiFn = plugin.plugin[api];
+  var results = [];
+  plugins.forEach(function (plugin) {
+    var apiFn = plugin.plugin[api];
     if (!apiFn) {
       return;
     }
     try {
-      const result = apiFn(args, plugin.options);
+      var result = apiFn(args, plugin.options);
       if (result && argTransform) {
         args = argTransform({
-          args,
-          result
+          args: args,
+          result: result
         });
       }
 
       // This if case keeps behaviour as before, we should allow undefined here as the api is defined
       // TODO V4
-      if (typeof result !== `undefined`) {
+      if (_typeof(result) !== "undefined") {
         results.push(result);
       }
     } catch (e) {
@@ -43850,35 +43857,81 @@ function apiRunner(api, args, defaultReturn, argTransform) {
   });
   return results.length ? results : [defaultReturn];
 }
-async function apiRunnerAsync(api, args, defaultReturn, argTransform) {
-  if (!apis[api]) {
-    console.log(`This API doesn't exist`, api);
-  }
-  const results = [];
-  for (const plugin of plugins) {
-    const apiFn = plugin.plugin[api];
-    if (!apiFn) {
-      continue;
-    }
-    try {
-      const result = await apiFn(args, plugin.options);
-      if (result && argTransform) {
-        args = argTransform({
-          args,
-          result
-        });
-      }
+function apiRunnerAsync(_x, _x2, _x3, _x4) {
+  return _apiRunnerAsync.apply(this, arguments);
+}
+function _apiRunnerAsync() {
+  _apiRunnerAsync = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee(api, args, defaultReturn, argTransform) {
+    var results, _iterator, _step, plugin, apiFn, result;
+    return _regeneratorRuntime().wrap(function _callee$(_context) {
+      while (1) switch (_context.prev = _context.next) {
+        case 0:
+          if (!apis[api]) {
+            console.log("This API doesn't exist", api);
+          }
+          results = [];
+          _iterator = _createForOfIteratorHelper(plugins);
+          _context.prev = 3;
+          _iterator.s();
+        case 5:
+          if ((_step = _iterator.n()).done) {
+            _context.next = 23;
+            break;
+          }
+          plugin = _step.value;
+          apiFn = plugin.plugin[api];
+          if (apiFn) {
+            _context.next = 10;
+            break;
+          }
+          return _context.abrupt("continue", 21);
+        case 10:
+          _context.prev = 10;
+          _context.next = 13;
+          return apiFn(args, plugin.options);
+        case 13:
+          result = _context.sent;
+          if (result && argTransform) {
+            args = argTransform({
+              args: args,
+              result: result
+            });
+          }
 
-      // This if case keeps behaviour as before, we should allow undefined here as the api is defined
-      // TODO V4
-      if (typeof result !== `undefined`) {
-        results.push(result);
+          // This if case keeps behaviour as before, we should allow undefined here as the api is defined
+          // TODO V4
+          if (_typeof(result) !== "undefined") {
+            results.push(result);
+          }
+          _context.next = 21;
+          break;
+        case 18:
+          _context.prev = 18;
+          _context.t0 = _context["catch"](10);
+          augmentErrorWithPlugin(plugin, _context.t0);
+        case 21:
+          _context.next = 5;
+          break;
+        case 23:
+          _context.next = 28;
+          break;
+        case 25:
+          _context.prev = 25;
+          _context.t1 = _context["catch"](3);
+          _iterator.e(_context.t1);
+        case 28:
+          _context.prev = 28;
+          _iterator.f();
+          return _context.finish(28);
+        case 31:
+          return _context.abrupt("return", results.length ? results : [defaultReturn]);
+        case 32:
+        case "end":
+          return _context.stop();
       }
-    } catch (e) {
-      augmentErrorWithPlugin(plugin, e);
-    }
-  }
-  return results.length ? results : [defaultReturn];
+    }, _callee, null, [[3, 25, 28, 31], [10, 18]]);
+  }));
+  return _apiRunnerAsync.apply(this, arguments);
 }
 
 /***/ }),
@@ -44134,7 +44187,7 @@ function HTML(props) {
     name: "viewport",
     content: "width=device-width, initial-scale=1, shrink-to-fit=no"
   }), props.headComponents), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("body", props.bodyAttributes, props.preBodyComponents, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    key: `body`,
+    key: "body",
     id: "___gatsby",
     dangerouslySetInnerHTML: {
       __html: props.body
@@ -44165,7 +44218,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var mitt__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mitt */ "./node_modules/mitt/dist/mitt.es.js");
 
-const emitter = (0,mitt__WEBPACK_IMPORTED_MODULE_0__["default"])();
+var emitter = (0,mitt__WEBPACK_IMPORTED_MODULE_0__["default"])();
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (emitter);
 
 /***/ }),
@@ -44193,26 +44246,26 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const pathCache = new Map();
-let matchPaths = [];
-const trimPathname = rawPathname => {
-  const pathname = decodeURIComponent(rawPathname);
+var pathCache = new Map();
+var matchPaths = [];
+var trimPathname = function trimPathname(rawPathname) {
+  var pathname = decodeURIComponent(rawPathname);
   // Remove the pathPrefix from the pathname.
-  const trimmedPathname = (0,_strip_prefix__WEBPACK_IMPORTED_MODULE_1__["default"])(pathname, decodeURIComponent(""))
+  var trimmedPathname = (0,_strip_prefix__WEBPACK_IMPORTED_MODULE_1__["default"])(pathname, decodeURIComponent(""))
   // Remove any hashfragment
-  .split(`#`)[0]
+  .split("#")[0]
   // Remove search query
-  .split(`?`)[0];
+  .split("?")[0];
   return trimmedPathname;
 };
 function absolutify(path) {
   // If it's already absolute, return as-is
-  if (path.startsWith(`/`) || path.startsWith(`https://`) || path.startsWith(`http://`)) {
+  if (path.startsWith("/") || path.startsWith("https://") || path.startsWith("http://")) {
     return path;
   }
   // Calculate path relative to current location, adding a trailing slash to
   // match behavior of @reach/router
-  return new URL(path, window.location.href + (window.location.href.endsWith(`/`) ? `` : `/`)).pathname;
+  return new URL(path, window.location.href + (window.location.href.endsWith("/") ? "" : "/")).pathname;
 }
 
 /**
@@ -44220,7 +44273,7 @@ function absolutify(path) {
  *
  * @param {Array<{path: string, matchPath: string}>} value collection of matchPaths
  */
-const setMatchPaths = value => {
+var setMatchPaths = function setMatchPaths(value) {
   matchPaths = value;
 };
 
@@ -44232,18 +44285,17 @@ const setMatchPaths = value => {
  * @param {string} rawPathname A raw pathname
  * @return {string|null}
  */
-const findMatchPath = rawPathname => {
-  const trimmedPathname = cleanPath(rawPathname);
-  const pickPaths = matchPaths.map(({
-    path,
-    matchPath
-  }) => {
+var findMatchPath = function findMatchPath(rawPathname) {
+  var trimmedPathname = cleanPath(rawPathname);
+  var pickPaths = matchPaths.map(function (_ref) {
+    var path = _ref.path,
+      matchPath = _ref.matchPath;
     return {
       path: matchPath,
       originalPath: path
     };
   });
-  const path = (0,_gatsbyjs_reach_router_lib_utils__WEBPACK_IMPORTED_MODULE_0__.pick)(pickPaths, trimmedPathname);
+  var path = (0,_gatsbyjs_reach_router_lib_utils__WEBPACK_IMPORTED_MODULE_0__.pick)(pickPaths, trimmedPathname);
   if (path) {
     return (0,_normalize_page_path__WEBPACK_IMPORTED_MODULE_2__["default"])(path.route.originalPath);
   }
@@ -44259,18 +44311,17 @@ const findMatchPath = rawPathname => {
  * @param {string} rawPathname A raw pathname
  * @return {object}
  */
-const grabMatchParams = rawPathname => {
-  const trimmedPathname = cleanPath(rawPathname);
-  const pickPaths = matchPaths.map(({
-    path,
-    matchPath
-  }) => {
+var grabMatchParams = function grabMatchParams(rawPathname) {
+  var trimmedPathname = cleanPath(rawPathname);
+  var pickPaths = matchPaths.map(function (_ref2) {
+    var path = _ref2.path,
+      matchPath = _ref2.matchPath;
     return {
       path: matchPath,
       originalPath: path
     };
   });
-  const path = (0,_gatsbyjs_reach_router_lib_utils__WEBPACK_IMPORTED_MODULE_0__.pick)(pickPaths, trimmedPathname);
+  var path = (0,_gatsbyjs_reach_router_lib_utils__WEBPACK_IMPORTED_MODULE_0__.pick)(pickPaths, trimmedPathname);
   if (path) {
     return path.params;
   }
@@ -44285,16 +44336,16 @@ const grabMatchParams = rawPathname => {
 //
 // Or if `match-paths.json` contains `{ "/foo*": "/page1", ...}`, then
 // `/foo?bar=far` => `/page1`
-const findPath = rawPathname => {
-  const trimmedPathname = trimPathname(absolutify(rawPathname));
+var findPath = function findPath(rawPathname) {
+  var trimmedPathname = trimPathname(absolutify(rawPathname));
   if (pathCache.has(trimmedPathname)) {
     return pathCache.get(trimmedPathname);
   }
-  const redirect = (0,_redirect_utils_js__WEBPACK_IMPORTED_MODULE_3__.maybeGetBrowserRedirect)(rawPathname);
+  var redirect = (0,_redirect_utils_js__WEBPACK_IMPORTED_MODULE_3__.maybeGetBrowserRedirect)(rawPathname);
   if (redirect) {
     return findPath(redirect.toPath);
   }
-  let foundPath = findMatchPath(trimmedPathname);
+  var foundPath = findMatchPath(trimmedPathname);
   if (!foundPath) {
     foundPath = cleanPath(rawPathname);
   }
@@ -44309,11 +44360,11 @@ const findPath = rawPathname => {
  * @param {string} rawPathname A raw pathname
  * @return {string}
  */
-const cleanPath = rawPathname => {
-  const trimmedPathname = trimPathname(absolutify(rawPathname));
-  let foundPath = trimmedPathname;
-  if (foundPath === `/index.html`) {
-    foundPath = `/`;
+var cleanPath = function cleanPath(rawPathname) {
+  var trimmedPathname = trimPathname(absolutify(rawPathname));
+  var foundPath = trimmedPathname;
+  if (foundPath === "/index.html") {
+    foundPath = "/";
   }
   foundPath = (0,_normalize_page_path__WEBPACK_IMPORTED_MODULE_2__["default"])(foundPath);
   return foundPath;
@@ -44352,59 +44403,54 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _public_page_renderer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./public-page-renderer */ "./.cache/public-page-renderer.js");
 /* harmony import */ var _public_page_renderer__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_page_renderer__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _loader__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./loader */ "./.cache/loader.js");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 
 
 
 
 
 
-const prefetchPathname = _loader__WEBPACK_IMPORTED_MODULE_4__["default"].enqueue;
-const StaticQueryContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createContext({});
-function StaticQueryDataRenderer({
-  staticQueryData,
-  data,
-  query,
-  render
-}) {
-  const finalData = data ? data.data : staticQueryData[query] && staticQueryData[query].data;
+var prefetchPathname = _loader__WEBPACK_IMPORTED_MODULE_4__["default"].enqueue;
+var StaticQueryContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createContext({});
+function StaticQueryDataRenderer(_ref) {
+  var staticQueryData = _ref.staticQueryData,
+    data = _ref.data,
+    query = _ref.query,
+    render = _ref.render;
+  var finalData = data ? data.data : staticQueryData[query] && staticQueryData[query].data;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, finalData && render(finalData), !finalData && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, "Loading (StaticQuery)"));
 }
-const StaticQuery = props => {
-  const {
-    data,
-    query,
-    render,
-    children
-  } = props;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StaticQueryContext.Consumer, null, staticQueryData => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StaticQueryDataRenderer, {
-    data: data,
-    query: query,
-    render: render || children,
-    staticQueryData: staticQueryData
-  }));
+var StaticQuery = function StaticQuery(props) {
+  var data = props.data,
+    query = props.query,
+    render = props.render,
+    children = props.children;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StaticQueryContext.Consumer, null, function (staticQueryData) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StaticQueryDataRenderer, {
+      data: data,
+      query: query,
+      render: render || children,
+      staticQueryData: staticQueryData
+    });
+  });
 };
-const useStaticQuery = query => {
+var useStaticQuery = function useStaticQuery(query) {
   var _context$query;
-  if (typeof (react__WEBPACK_IMPORTED_MODULE_0___default().useContext) !== `function` && "development" === `development`) {
-    throw new Error(`You're likely using a version of React that doesn't support Hooks\n` + `Please update React and ReactDOM to 16.8.0 or later to use the useStaticQuery hook.`);
+  if (_typeof((react__WEBPACK_IMPORTED_MODULE_0___default().useContext)) !== "function" && "development" === "development") {
+    throw new Error("You're likely using a version of React that doesn't support Hooks\n" + "Please update React and ReactDOM to 16.8.0 or later to use the useStaticQuery hook.");
   }
-  const context = react__WEBPACK_IMPORTED_MODULE_0___default().useContext(StaticQueryContext);
+  var context = react__WEBPACK_IMPORTED_MODULE_0___default().useContext(StaticQueryContext);
 
   // query is a stringified number like `3303882` when wrapped with graphql, If a user forgets
   // to wrap the query in a grqphql, then casting it to a Number results in `NaN` allowing us to
   // catch the misuse of the API and give proper direction
   if (isNaN(Number(query))) {
-    throw new Error(`useStaticQuery was called with a string but expects to be called using \`graphql\`. Try this:
-
-import { useStaticQuery, graphql } from 'gatsby';
-
-useStaticQuery(graphql\`${query}\`);
-`);
+    throw new Error("useStaticQuery was called with a string but expects to be called using `graphql`. Try this:\n\nimport { useStaticQuery, graphql } from 'gatsby';\n\nuseStaticQuery(graphql`".concat(query, "`);\n"));
   }
   if ((_context$query = context[query]) !== null && _context$query !== void 0 && _context$query.data) {
     return context[query].data;
   } else {
-    throw new Error(`The result of this StaticQuery could not be fetched.\n\n` + `This is likely a bug in Gatsby and if refreshing the page does not fix it, ` + `please open an issue in https://github.com/gatsbyjs/gatsby/issues`);
+    throw new Error("The result of this StaticQuery could not be fetched.\n\n" + "This is likely a bug in Gatsby and if refreshing the page does not fix it, " + "please open an issue in https://github.com/gatsbyjs/gatsby/issues");
   }
 };
 StaticQuery.propTypes = {
@@ -44414,7 +44460,7 @@ StaticQuery.propTypes = {
   children: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().func)
 };
 function graphql() {
-  throw new Error(`It appears like Gatsby is misconfigured. Gatsby related \`graphql\` calls ` + `are supposed to only be evaluated at compile time, and then compiled away. ` + `Unfortunately, something went wrong and the query was left in the compiled code.\n\n` + `Unless your site has a complex or custom babel/Gatsby configuration this is likely a bug in Gatsby.`);
+  throw new Error("It appears like Gatsby is misconfigured. Gatsby related `graphql` calls " + "are supposed to only be evaluated at compile time, and then compiled away. " + "Unfortunately, something went wrong and the query was left in the compiled code.\n\n" + "Unless your site has a complex or custom babel/Gatsby configuration this is likely a bug in Gatsby.");
 }
 
 
@@ -44440,6 +44486,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _prefetch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./prefetch */ "./.cache/prefetch.js");
 /* harmony import */ var _emitter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./emitter */ "./.cache/emitter.js");
 /* harmony import */ var _find_path__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./find-path */ "./.cache/find-path.js");
+function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
+function _get() { if (typeof Reflect !== "undefined" && Reflect.get) { _get = Reflect.get.bind(); } else { _get = function _get(target, property, receiver) { var base = _superPropBase(target, property); if (!base) return; var desc = Object.getOwnPropertyDescriptor(base, property); if (desc.get) { return desc.get.call(arguments.length < 3 ? target : receiver); } return desc.value; }; } return _get.apply(this, arguments); }
+function _superPropBase(object, property) { while (!Object.prototype.hasOwnProperty.call(object, property)) { object = _getPrototypeOf(object); if (object === null) break; } return object; }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 
 
 
@@ -44447,31 +44521,34 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Available resource loading statuses
  */
-const PageResourceStatus = {
+var PageResourceStatus = {
   /**
    * At least one of critical resources failed to load
    */
-  Error: `error`,
+  Error: "error",
   /**
    * Resources loaded successfully
    */
-  Success: `success`
+  Success: "success"
 };
-const preferDefault = m => m && m.default || m;
-const stripSurroundingSlashes = s => {
-  s = s[0] === `/` ? s.slice(1) : s;
-  s = s.endsWith(`/`) ? s.slice(0, -1) : s;
+var preferDefault = function preferDefault(m) {
+  return m && m["default"] || m;
+};
+var stripSurroundingSlashes = function stripSurroundingSlashes(s) {
+  s = s[0] === "/" ? s.slice(1) : s;
+  s = s.endsWith("/") ? s.slice(0, -1) : s;
   return s;
 };
-const createPageDataUrl = path => {
-  const fixedPath = path === `/` ? `index` : stripSurroundingSlashes(path);
-  return `${""}/page-data/${fixedPath}/page-data.json`;
+var createPageDataUrl = function createPageDataUrl(path) {
+  var fixedPath = path === "/" ? "index" : stripSurroundingSlashes(path);
+  return "".concat("", "/page-data/").concat(fixedPath, "/page-data.json");
 };
-function doFetch(url, method = `GET`) {
-  return new Promise((resolve, reject) => {
-    const req = new XMLHttpRequest();
+function doFetch(url) {
+  var method = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "GET";
+  return new Promise(function (resolve, reject) {
+    var req = new XMLHttpRequest();
     req.open(method, url, true);
-    req.onreadystatechange = () => {
+    req.onreadystatechange = function () {
       if (req.readyState == 4) {
         resolve(req);
       }
@@ -44479,9 +44556,9 @@ function doFetch(url, method = `GET`) {
     req.send(null);
   });
 }
-const doesConnectionSupportPrefetch = () => {
-  if (`connection` in navigator && typeof navigator.connection !== `undefined`) {
-    if ((navigator.connection.effectiveType || ``).includes(`2g`)) {
+var doesConnectionSupportPrefetch = function doesConnectionSupportPrefetch() {
+  if ("connection" in navigator && _typeof(navigator.connection) !== "undefined") {
+    if ((navigator.connection.effectiveType || "").includes("2g")) {
       return false;
     }
     if (navigator.connection.saveData) {
@@ -44490,8 +44567,9 @@ const doesConnectionSupportPrefetch = () => {
   }
   return true;
 };
-const toPageResources = (pageData, component = null) => {
-  const page = {
+var toPageResources = function toPageResources(pageData) {
+  var component = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+  var page = {
     componentChunkName: pageData.componentChunkName,
     path: pageData.path,
     webpackCompilationHash: pageData.webpackCompilationHash,
@@ -44499,14 +44577,15 @@ const toPageResources = (pageData, component = null) => {
     staticQueryHashes: pageData.staticQueryHashes
   };
   return {
-    component,
+    component: component,
     json: pageData.result,
-    page
+    page: page
   };
 };
-class BaseLoader {
-  constructor(loadComponent, matchPaths) {
-    this.inFlightNetworkRequests = new Map();
+var BaseLoader = /*#__PURE__*/function () {
+  function BaseLoader(loadComponent, matchPaths) {
+    _classCallCheck(this, BaseLoader);
+    _defineProperty(this, "inFlightNetworkRequests", new Map());
     // Map of pagePath -> Page. Where Page is an object with: {
     //   status: PageResourceStatus.Success || PageResourceStatus.Error,
     //   payload: PageResources, // undefined if PageResourceStatus.Error
@@ -44531,415 +44610,488 @@ class BaseLoader {
     this.loadComponent = loadComponent;
     (0,_find_path__WEBPACK_IMPORTED_MODULE_2__.setMatchPaths)(matchPaths);
   }
-  memoizedGet(url) {
-    let inFlightPromise = this.inFlightNetworkRequests.get(url);
-    if (!inFlightPromise) {
-      inFlightPromise = doFetch(url, `GET`);
-      this.inFlightNetworkRequests.set(url, inFlightPromise);
-    }
-
-    // Prefer duplication with then + catch over .finally to prevent problems in ie11 + firefox
-    return inFlightPromise.then(response => {
-      this.inFlightNetworkRequests.delete(url);
-      return response;
-    }).catch(err => {
-      this.inFlightNetworkRequests.delete(url);
-      throw err;
-    });
-  }
-  setApiRunner(apiRunner) {
-    this.apiRunner = apiRunner;
-    this.prefetchDisabled = apiRunner(`disableCorePrefetching`).some(a => a);
-  }
-  fetchPageDataJson(loadObj) {
-    const {
-      pagePath,
-      retries = 0
-    } = loadObj;
-    const url = createPageDataUrl(pagePath);
-    return this.memoizedGet(url).then(req => {
-      const {
-        status,
-        responseText
-      } = req;
-
-      // Handle 200
-      if (status === 200) {
-        try {
-          const jsonPayload = JSON.parse(responseText);
-          if (jsonPayload.path === undefined) {
-            throw new Error(`not a valid pageData response`);
-          }
-          return Object.assign(loadObj, {
-            status: PageResourceStatus.Success,
-            payload: jsonPayload
-          });
-        } catch (err) {
-          // continue regardless of error
-        }
+  return _createClass(BaseLoader, [{
+    key: "memoizedGet",
+    value: function memoizedGet(url) {
+      var _this = this;
+      var inFlightPromise = this.inFlightNetworkRequests.get(url);
+      if (!inFlightPromise) {
+        inFlightPromise = doFetch(url, "GET");
+        this.inFlightNetworkRequests.set(url, inFlightPromise);
       }
 
-      // Handle 404
-      if (status === 404 || status === 200) {
-        // If the request was for a 404 page and it doesn't exist, we're done
-        if (pagePath === `/404.html`) {
+      // Prefer duplication with then + catch over .finally to prevent problems in ie11 + firefox
+      return inFlightPromise.then(function (response) {
+        _this.inFlightNetworkRequests["delete"](url);
+        return response;
+      })["catch"](function (err) {
+        _this.inFlightNetworkRequests["delete"](url);
+        throw err;
+      });
+    }
+  }, {
+    key: "setApiRunner",
+    value: function setApiRunner(apiRunner) {
+      this.apiRunner = apiRunner;
+      this.prefetchDisabled = apiRunner("disableCorePrefetching").some(function (a) {
+        return a;
+      });
+    }
+  }, {
+    key: "fetchPageDataJson",
+    value: function fetchPageDataJson(loadObj) {
+      var _this2 = this;
+      var pagePath = loadObj.pagePath,
+        _loadObj$retries = loadObj.retries,
+        retries = _loadObj$retries === void 0 ? 0 : _loadObj$retries;
+      var url = createPageDataUrl(pagePath);
+      return this.memoizedGet(url).then(function (req) {
+        var status = req.status,
+          responseText = req.responseText;
+
+        // Handle 200
+        if (status === 200) {
+          try {
+            var jsonPayload = JSON.parse(responseText);
+            if (jsonPayload.path === undefined) {
+              throw new Error("not a valid pageData response");
+            }
+            return Object.assign(loadObj, {
+              status: PageResourceStatus.Success,
+              payload: jsonPayload
+            });
+          } catch (err) {
+            // continue regardless of error
+          }
+        }
+
+        // Handle 404
+        if (status === 404 || status === 200) {
+          // If the request was for a 404 page and it doesn't exist, we're done
+          if (pagePath === "/404.html") {
+            return Object.assign(loadObj, {
+              status: PageResourceStatus.Error
+            });
+          }
+
+          // Need some code here to cache the 404 request. In case
+          // multiple loadPageDataJsons result in 404s
+          return _this2.fetchPageDataJson(Object.assign(loadObj, {
+            pagePath: "/404.html",
+            notFound: true
+          }));
+        }
+
+        // handle 500 response (Unrecoverable)
+        if (status === 500) {
           return Object.assign(loadObj, {
             status: PageResourceStatus.Error
           });
         }
 
-        // Need some code here to cache the 404 request. In case
-        // multiple loadPageDataJsons result in 404s
-        return this.fetchPageDataJson(Object.assign(loadObj, {
-          pagePath: `/404.html`,
-          notFound: true
-        }));
-      }
+        // Handle everything else, including status === 0, and 503s. Should retry
+        if (retries < 3) {
+          return _this2.fetchPageDataJson(Object.assign(loadObj, {
+            retries: retries + 1
+          }));
+        }
 
-      // handle 500 response (Unrecoverable)
-      if (status === 500) {
+        // Retried 3 times already, result is an error.
         return Object.assign(loadObj, {
           status: PageResourceStatus.Error
         });
-      }
-
-      // Handle everything else, including status === 0, and 503s. Should retry
-      if (retries < 3) {
-        return this.fetchPageDataJson(Object.assign(loadObj, {
-          retries: retries + 1
-        }));
-      }
-
-      // Retried 3 times already, result is an error.
-      return Object.assign(loadObj, {
-        status: PageResourceStatus.Error
       });
-    });
-  }
-  loadPageDataJson(rawPath) {
-    const pagePath = (0,_find_path__WEBPACK_IMPORTED_MODULE_2__.findPath)(rawPath);
-    if (this.pageDataDb.has(pagePath)) {
-      const pageData = this.pageDataDb.get(pagePath);
-      if (true) {
-        return Promise.resolve(pageData);
-      }
     }
-    return this.fetchPageDataJson({
-      pagePath
-    }).then(pageData => {
-      this.pageDataDb.set(pagePath, pageData);
-      return pageData;
-    });
-  }
-  findMatchPath(rawPath) {
-    return (0,_find_path__WEBPACK_IMPORTED_MODULE_2__.findMatchPath)(rawPath);
-  }
-
-  // TODO check all uses of this and whether they use undefined for page resources not exist
-  loadPage(rawPath) {
-    const pagePath = (0,_find_path__WEBPACK_IMPORTED_MODULE_2__.findPath)(rawPath);
-    if (this.pageDb.has(pagePath)) {
-      const page = this.pageDb.get(pagePath);
-      if (true) {
-        if (page.error) {
-          return {
-            error: page.error,
-            status: page.status
-          };
+  }, {
+    key: "loadPageDataJson",
+    value: function loadPageDataJson(rawPath) {
+      var _this3 = this;
+      var pagePath = (0,_find_path__WEBPACK_IMPORTED_MODULE_2__.findPath)(rawPath);
+      if (this.pageDataDb.has(pagePath)) {
+        var pageData = this.pageDataDb.get(pagePath);
+        if (true) {
+          return Promise.resolve(pageData);
         }
-        return Promise.resolve(page.payload);
       }
+      return this.fetchPageDataJson({
+        pagePath: pagePath
+      }).then(function (pageData) {
+        _this3.pageDataDb.set(pagePath, pageData);
+        return pageData;
+      });
     }
-    if (this.inFlightDb.has(pagePath)) {
-      return this.inFlightDb.get(pagePath);
+  }, {
+    key: "findMatchPath",
+    value: function findMatchPath(rawPath) {
+      return (0,_find_path__WEBPACK_IMPORTED_MODULE_2__.findMatchPath)(rawPath);
     }
-    const inFlightPromise = Promise.all([this.loadAppData(), this.loadPageDataJson(pagePath)]).then(allData => {
-      const result = allData[1];
-      if (result.status === PageResourceStatus.Error) {
-        return {
-          status: PageResourceStatus.Error
-        };
-      }
-      let pageData = result.payload;
-      const {
-        componentChunkName,
-        staticQueryHashes = []
-      } = pageData;
-      const finalResult = {};
-      const componentChunkPromise = this.loadComponent(componentChunkName).then(component => {
-        finalResult.createdAt = new Date();
-        let pageResources;
-        if (!component || component instanceof Error) {
-          finalResult.status = PageResourceStatus.Error;
-          finalResult.error = component;
-        } else {
-          finalResult.status = PageResourceStatus.Success;
-          if (result.notFound === true) {
-            finalResult.notFound = true;
+
+    // TODO check all uses of this and whether they use undefined for page resources not exist
+  }, {
+    key: "loadPage",
+    value: function loadPage(rawPath) {
+      var _this4 = this;
+      var pagePath = (0,_find_path__WEBPACK_IMPORTED_MODULE_2__.findPath)(rawPath);
+      if (this.pageDb.has(pagePath)) {
+        var page = this.pageDb.get(pagePath);
+        if (true) {
+          if (page.error) {
+            return {
+              error: page.error,
+              status: page.status
+            };
           }
-          pageData = Object.assign(pageData, {
-            webpackCompilationHash: allData[0] ? allData[0].webpackCompilationHash : ``
-          });
-          pageResources = toPageResources(pageData, component);
+          return Promise.resolve(page.payload);
         }
-        // undefined if final result is an error
-        return pageResources;
-      });
-      const staticQueryBatchPromise = Promise.all(staticQueryHashes.map(staticQueryHash => {
-        // Check for cache in case this static query result has already been loaded
-        if (this.staticQueryDb[staticQueryHash]) {
-          const jsonPayload = this.staticQueryDb[staticQueryHash];
-          return {
-            staticQueryHash,
-            jsonPayload
-          };
-        }
-        return this.memoizedGet(`${""}/page-data/sq/d/${staticQueryHash}.json`).then(req => {
-          const jsonPayload = JSON.parse(req.responseText);
-          return {
-            staticQueryHash,
-            jsonPayload
-          };
-        }).catch(() => {
-          throw new Error(`We couldn't load "${""}/page-data/sq/d/${staticQueryHash}.json"`);
-        });
-      })).then(staticQueryResults => {
-        const staticQueryResultsMap = {};
-        staticQueryResults.forEach(({
-          staticQueryHash,
-          jsonPayload
-        }) => {
-          staticQueryResultsMap[staticQueryHash] = jsonPayload;
-          this.staticQueryDb[staticQueryHash] = jsonPayload;
-        });
-        return staticQueryResultsMap;
-      });
-      return Promise.all([componentChunkPromise, staticQueryBatchPromise]).then(([pageResources, staticQueryResults]) => {
-        let payload;
-        if (pageResources) {
-          payload = {
-            ...pageResources,
-            staticQueryResults
-          };
-          finalResult.payload = payload;
-          _emitter__WEBPACK_IMPORTED_MODULE_1__["default"].emit(`onPostLoadPageResources`, {
-            page: payload,
-            pageResources: payload
-          });
-        }
-        this.pageDb.set(pagePath, finalResult);
-        if (finalResult.error) {
-          return {
-            error: finalResult.error,
-            status: finalResult.status
-          };
-        }
-        return payload;
-      })
-      // when static-query fail to load we throw a better error
-      .catch(err => {
-        return {
-          error: err,
-          status: PageResourceStatus.Error
-        };
-      });
-    });
-    inFlightPromise.then(() => {
-      this.inFlightDb.delete(pagePath);
-    }).catch(error => {
-      this.inFlightDb.delete(pagePath);
-      throw error;
-    });
-    this.inFlightDb.set(pagePath, inFlightPromise);
-    return inFlightPromise;
-  }
-
-  // returns undefined if the page does not exists in cache
-  loadPageSync(rawPath, options = {}) {
-    const pagePath = (0,_find_path__WEBPACK_IMPORTED_MODULE_2__.findPath)(rawPath);
-    if (this.pageDb.has(pagePath)) {
-      const pageData = this.pageDb.get(pagePath);
-      if (pageData.payload) {
-        return pageData.payload;
       }
-      if (options !== null && options !== void 0 && options.withErrorDetails) {
-        return {
-          error: pageData.error,
-          status: pageData.status
-        };
+      if (this.inFlightDb.has(pagePath)) {
+        return this.inFlightDb.get(pagePath);
       }
-    }
-    return undefined;
-  }
-  shouldPrefetch(pagePath) {
-    // Skip prefetching if we know user is on slow or constrained connection
-    if (!doesConnectionSupportPrefetch()) {
-      return false;
-    }
-
-    // Check if the page exists.
-    if (this.pageDb.has(pagePath)) {
-      return false;
-    }
-    return true;
-  }
-  prefetch(pagePath) {
-    if (!this.shouldPrefetch(pagePath)) {
-      return false;
-    }
-
-    // Tell plugins with custom prefetching logic that they should start
-    // prefetching this path.
-    if (!this.prefetchTriggered.has(pagePath)) {
-      this.apiRunner(`onPrefetchPathname`, {
-        pathname: pagePath
+      var inFlightPromise = Promise.all([this.loadAppData(), this.loadPageDataJson(pagePath)]).then(function (allData) {
+        var result = allData[1];
+        if (result.status === PageResourceStatus.Error) {
+          return {
+            status: PageResourceStatus.Error
+          };
+        }
+        var pageData = result.payload;
+        var _pageData = pageData,
+          componentChunkName = _pageData.componentChunkName,
+          _pageData$staticQuery = _pageData.staticQueryHashes,
+          staticQueryHashes = _pageData$staticQuery === void 0 ? [] : _pageData$staticQuery;
+        var finalResult = {};
+        var componentChunkPromise = _this4.loadComponent(componentChunkName).then(function (component) {
+          finalResult.createdAt = new Date();
+          var pageResources;
+          if (!component || component instanceof Error) {
+            finalResult.status = PageResourceStatus.Error;
+            finalResult.error = component;
+          } else {
+            finalResult.status = PageResourceStatus.Success;
+            if (result.notFound === true) {
+              finalResult.notFound = true;
+            }
+            pageData = Object.assign(pageData, {
+              webpackCompilationHash: allData[0] ? allData[0].webpackCompilationHash : ""
+            });
+            pageResources = toPageResources(pageData, component);
+          }
+          // undefined if final result is an error
+          return pageResources;
+        });
+        var staticQueryBatchPromise = Promise.all(staticQueryHashes.map(function (staticQueryHash) {
+          // Check for cache in case this static query result has already been loaded
+          if (_this4.staticQueryDb[staticQueryHash]) {
+            var jsonPayload = _this4.staticQueryDb[staticQueryHash];
+            return {
+              staticQueryHash: staticQueryHash,
+              jsonPayload: jsonPayload
+            };
+          }
+          return _this4.memoizedGet("".concat("", "/page-data/sq/d/").concat(staticQueryHash, ".json")).then(function (req) {
+            var jsonPayload = JSON.parse(req.responseText);
+            return {
+              staticQueryHash: staticQueryHash,
+              jsonPayload: jsonPayload
+            };
+          })["catch"](function () {
+            throw new Error("We couldn't load \"".concat("", "/page-data/sq/d/").concat(staticQueryHash, ".json\""));
+          });
+        })).then(function (staticQueryResults) {
+          var staticQueryResultsMap = {};
+          staticQueryResults.forEach(function (_ref) {
+            var staticQueryHash = _ref.staticQueryHash,
+              jsonPayload = _ref.jsonPayload;
+            staticQueryResultsMap[staticQueryHash] = jsonPayload;
+            _this4.staticQueryDb[staticQueryHash] = jsonPayload;
+          });
+          return staticQueryResultsMap;
+        });
+        return Promise.all([componentChunkPromise, staticQueryBatchPromise]).then(function (_ref2) {
+          var _ref3 = _slicedToArray(_ref2, 2),
+            pageResources = _ref3[0],
+            staticQueryResults = _ref3[1];
+          var payload;
+          if (pageResources) {
+            payload = _objectSpread(_objectSpread({}, pageResources), {}, {
+              staticQueryResults: staticQueryResults
+            });
+            finalResult.payload = payload;
+            _emitter__WEBPACK_IMPORTED_MODULE_1__["default"].emit("onPostLoadPageResources", {
+              page: payload,
+              pageResources: payload
+            });
+          }
+          _this4.pageDb.set(pagePath, finalResult);
+          if (finalResult.error) {
+            return {
+              error: finalResult.error,
+              status: finalResult.status
+            };
+          }
+          return payload;
+        })
+        // when static-query fail to load we throw a better error
+        ["catch"](function (err) {
+          return {
+            error: err,
+            status: PageResourceStatus.Error
+          };
+        });
       });
-      this.prefetchTriggered.add(pagePath);
+      inFlightPromise.then(function () {
+        _this4.inFlightDb["delete"](pagePath);
+      })["catch"](function (error) {
+        _this4.inFlightDb["delete"](pagePath);
+        throw error;
+      });
+      this.inFlightDb.set(pagePath, inFlightPromise);
+      return inFlightPromise;
     }
 
-    // If a plugin has disabled core prefetching, stop now.
-    if (this.prefetchDisabled) {
-      return false;
+    // returns undefined if the page does not exists in cache
+  }, {
+    key: "loadPageSync",
+    value: function loadPageSync(rawPath) {
+      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+      var pagePath = (0,_find_path__WEBPACK_IMPORTED_MODULE_2__.findPath)(rawPath);
+      if (this.pageDb.has(pagePath)) {
+        var pageData = this.pageDb.get(pagePath);
+        if (pageData.payload) {
+          return pageData.payload;
+        }
+        if (options !== null && options !== void 0 && options.withErrorDetails) {
+          return {
+            error: pageData.error,
+            status: pageData.status
+          };
+        }
+      }
+      return undefined;
     }
-    const realPath = (0,_find_path__WEBPACK_IMPORTED_MODULE_2__.findPath)(pagePath);
-    // Todo make doPrefetch logic cacheable
-    // eslint-disable-next-line consistent-return
-    this.doPrefetch(realPath).then(() => {
-      if (!this.prefetchCompleted.has(pagePath)) {
-        this.apiRunner(`onPostPrefetchPathname`, {
+  }, {
+    key: "shouldPrefetch",
+    value: function shouldPrefetch(pagePath) {
+      // Skip prefetching if we know user is on slow or constrained connection
+      if (!doesConnectionSupportPrefetch()) {
+        return false;
+      }
+
+      // Check if the page exists.
+      if (this.pageDb.has(pagePath)) {
+        return false;
+      }
+      return true;
+    }
+  }, {
+    key: "prefetch",
+    value: function prefetch(pagePath) {
+      var _this5 = this;
+      if (!this.shouldPrefetch(pagePath)) {
+        return false;
+      }
+
+      // Tell plugins with custom prefetching logic that they should start
+      // prefetching this path.
+      if (!this.prefetchTriggered.has(pagePath)) {
+        this.apiRunner("onPrefetchPathname", {
           pathname: pagePath
         });
-        this.prefetchCompleted.add(pagePath);
-      }
-    });
-    return true;
-  }
-  doPrefetch(pagePath) {
-    const pageDataUrl = createPageDataUrl(pagePath);
-    return (0,_prefetch__WEBPACK_IMPORTED_MODULE_0__["default"])(pageDataUrl, {
-      crossOrigin: `anonymous`,
-      as: `fetch`
-    }).then(() =>
-    // This was just prefetched, so will return a response from
-    // the cache instead of making another request to the server
-    this.loadPageDataJson(pagePath));
-  }
-  hovering(rawPath) {
-    this.loadPage(rawPath);
-  }
-  getResourceURLsForPathname(rawPath) {
-    const pagePath = (0,_find_path__WEBPACK_IMPORTED_MODULE_2__.findPath)(rawPath);
-    const page = this.pageDataDb.get(pagePath);
-    if (page) {
-      const pageResources = toPageResources(page.payload);
-      return [...createComponentUrls(pageResources.page.componentChunkName), createPageDataUrl(pagePath)];
-    } else {
-      return null;
-    }
-  }
-  isPageNotFound(rawPath) {
-    const pagePath = (0,_find_path__WEBPACK_IMPORTED_MODULE_2__.findPath)(rawPath);
-    const page = this.pageDb.get(pagePath);
-    return !page || page.notFound;
-  }
-  loadAppData(retries = 0) {
-    return this.memoizedGet(`${""}/page-data/app-data.json`).then(req => {
-      const {
-        status,
-        responseText
-      } = req;
-      let appData;
-      if (status !== 200 && retries < 3) {
-        // Retry 3 times incase of non-200 responses
-        return this.loadAppData(retries + 1);
+        this.prefetchTriggered.add(pagePath);
       }
 
-      // Handle 200
-      if (status === 200) {
-        try {
-          const jsonPayload = JSON.parse(responseText);
-          if (jsonPayload.webpackCompilationHash === undefined) {
-            throw new Error(`not a valid app-data response`);
-          }
-          appData = jsonPayload;
-        } catch (err) {
-          // continue regardless of error
-        }
+      // If a plugin has disabled core prefetching, stop now.
+      if (this.prefetchDisabled) {
+        return false;
       }
-      return appData;
-    });
-  }
-}
-const createComponentUrls = componentChunkName => (window.___chunkMapping[componentChunkName] || []).map(chunk => "" + chunk);
-class ProdLoader extends BaseLoader {
-  constructor(asyncRequires, matchPaths, pageData) {
-    const loadComponent = chunkName => {
+      var realPath = (0,_find_path__WEBPACK_IMPORTED_MODULE_2__.findPath)(pagePath);
+      // Todo make doPrefetch logic cacheable
+      // eslint-disable-next-line consistent-return
+      this.doPrefetch(realPath).then(function () {
+        if (!_this5.prefetchCompleted.has(pagePath)) {
+          _this5.apiRunner("onPostPrefetchPathname", {
+            pathname: pagePath
+          });
+          _this5.prefetchCompleted.add(pagePath);
+        }
+      });
+      return true;
+    }
+  }, {
+    key: "doPrefetch",
+    value: function doPrefetch(pagePath) {
+      var _this6 = this;
+      var pageDataUrl = createPageDataUrl(pagePath);
+      return (0,_prefetch__WEBPACK_IMPORTED_MODULE_0__["default"])(pageDataUrl, {
+        crossOrigin: "anonymous",
+        as: "fetch"
+      }).then(function () {
+        return (
+          // This was just prefetched, so will return a response from
+          // the cache instead of making another request to the server
+          _this6.loadPageDataJson(pagePath)
+        );
+      });
+    }
+  }, {
+    key: "hovering",
+    value: function hovering(rawPath) {
+      this.loadPage(rawPath);
+    }
+  }, {
+    key: "getResourceURLsForPathname",
+    value: function getResourceURLsForPathname(rawPath) {
+      var pagePath = (0,_find_path__WEBPACK_IMPORTED_MODULE_2__.findPath)(rawPath);
+      var page = this.pageDataDb.get(pagePath);
+      if (page) {
+        var pageResources = toPageResources(page.payload);
+        return [].concat(_toConsumableArray(createComponentUrls(pageResources.page.componentChunkName)), [createPageDataUrl(pagePath)]);
+      } else {
+        return null;
+      }
+    }
+  }, {
+    key: "isPageNotFound",
+    value: function isPageNotFound(rawPath) {
+      var pagePath = (0,_find_path__WEBPACK_IMPORTED_MODULE_2__.findPath)(rawPath);
+      var page = this.pageDb.get(pagePath);
+      return !page || page.notFound;
+    }
+  }, {
+    key: "loadAppData",
+    value: function loadAppData() {
+      var _this7 = this;
+      var retries = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+      return this.memoizedGet("".concat("", "/page-data/app-data.json")).then(function (req) {
+        var status = req.status,
+          responseText = req.responseText;
+        var appData;
+        if (status !== 200 && retries < 3) {
+          // Retry 3 times incase of non-200 responses
+          return _this7.loadAppData(retries + 1);
+        }
+
+        // Handle 200
+        if (status === 200) {
+          try {
+            var jsonPayload = JSON.parse(responseText);
+            if (jsonPayload.webpackCompilationHash === undefined) {
+              throw new Error("not a valid app-data response");
+            }
+            appData = jsonPayload;
+          } catch (err) {
+            // continue regardless of error
+          }
+        }
+        return appData;
+      });
+    }
+  }]);
+}();
+var createComponentUrls = function createComponentUrls(componentChunkName) {
+  return (window.___chunkMapping[componentChunkName] || []).map(function (chunk) {
+    return "" + chunk;
+  });
+};
+var ProdLoader = /*#__PURE__*/function (_BaseLoader2) {
+  function ProdLoader(asyncRequires, matchPaths, pageData) {
+    var _this8;
+    _classCallCheck(this, ProdLoader);
+    var loadComponent = function loadComponent(chunkName) {
       if (!asyncRequires.components[chunkName]) {
-        throw new Error(`We couldn't find the correct component chunk with the name ${chunkName}`);
+        throw new Error("We couldn't find the correct component chunk with the name ".concat(chunkName));
       }
       return asyncRequires.components[chunkName]().then(preferDefault)
       // loader will handle the case when component is error
-      .catch(err => err);
+      ["catch"](function (err) {
+        return err;
+      });
     };
-    super(loadComponent, matchPaths);
+    _this8 = _callSuper(this, ProdLoader, [loadComponent, matchPaths]);
     if (pageData) {
-      this.pageDataDb.set(pageData.path, {
+      _this8.pageDataDb.set(pageData.path, {
         pagePath: pageData.path,
         payload: pageData,
-        status: `success`
+        status: "success"
       });
     }
+    return _this8;
   }
-  doPrefetch(pagePath) {
-    return super.doPrefetch(pagePath).then(result => {
-      if (result.status !== PageResourceStatus.Success) {
-        return Promise.resolve();
-      }
-      const pageData = result.payload;
-      const chunkName = pageData.componentChunkName;
-      const componentUrls = createComponentUrls(chunkName);
-      return Promise.all(componentUrls.map(_prefetch__WEBPACK_IMPORTED_MODULE_0__["default"])).then(() => pageData);
-    });
-  }
-  loadPageDataJson(rawPath) {
-    return super.loadPageDataJson(rawPath).then(data => {
-      if (data.notFound) {
-        // check if html file exist using HEAD request:
-        // if it does we should navigate to it instead of showing 404
-        return doFetch(rawPath, `HEAD`).then(req => {
-          if (req.status === 200) {
-            // page (.html file) actually exist (or we asked for 404 )
-            // returning page resources status as errored to trigger
-            // regular browser navigation to given page
-            return {
-              status: PageResourceStatus.Error
-            };
-          }
-
-          // if HEAD request wasn't 200, return notFound result
-          // and show 404 page
-          return data;
+  _inherits(ProdLoader, _BaseLoader2);
+  return _createClass(ProdLoader, [{
+    key: "doPrefetch",
+    value: function doPrefetch(pagePath) {
+      return _get(_getPrototypeOf(ProdLoader.prototype), "doPrefetch", this).call(this, pagePath).then(function (result) {
+        if (result.status !== PageResourceStatus.Success) {
+          return Promise.resolve();
+        }
+        var pageData = result.payload;
+        var chunkName = pageData.componentChunkName;
+        var componentUrls = createComponentUrls(chunkName);
+        return Promise.all(componentUrls.map(_prefetch__WEBPACK_IMPORTED_MODULE_0__["default"])).then(function () {
+          return pageData;
         });
-      }
-      return data;
-    });
-  }
-}
-let instance;
-const setLoader = _loader => {
+      });
+    }
+  }, {
+    key: "loadPageDataJson",
+    value: function loadPageDataJson(rawPath) {
+      return _get(_getPrototypeOf(ProdLoader.prototype), "loadPageDataJson", this).call(this, rawPath).then(function (data) {
+        if (data.notFound) {
+          // check if html file exist using HEAD request:
+          // if it does we should navigate to it instead of showing 404
+          return doFetch(rawPath, "HEAD").then(function (req) {
+            if (req.status === 200) {
+              // page (.html file) actually exist (or we asked for 404 )
+              // returning page resources status as errored to trigger
+              // regular browser navigation to given page
+              return {
+                status: PageResourceStatus.Error
+              };
+            }
+
+            // if HEAD request wasn't 200, return notFound result
+            // and show 404 page
+            return data;
+          });
+        }
+        return data;
+      });
+    }
+  }]);
+}(BaseLoader);
+var instance;
+var setLoader = function setLoader(_loader) {
   instance = _loader;
 };
-const publicLoader = {
-  enqueue: rawPath => instance.prefetch(rawPath),
+var publicLoader = {
+  enqueue: function enqueue(rawPath) {
+    return instance.prefetch(rawPath);
+  },
   // Real methods
-  getResourceURLsForPathname: rawPath => instance.getResourceURLsForPathname(rawPath),
-  loadPage: rawPath => instance.loadPage(rawPath),
+  getResourceURLsForPathname: function getResourceURLsForPathname(rawPath) {
+    return instance.getResourceURLsForPathname(rawPath);
+  },
+  loadPage: function loadPage(rawPath) {
+    return instance.loadPage(rawPath);
+  },
   // TODO add deprecation to v4 so people use withErrorDetails and then we can remove in v5 and change default behaviour
-  loadPageSync: (rawPath, options = {}) => instance.loadPageSync(rawPath, options),
-  prefetch: rawPath => instance.prefetch(rawPath),
-  isPageNotFound: rawPath => instance.isPageNotFound(rawPath),
-  hovering: rawPath => instance.hovering(rawPath),
-  loadAppData: () => instance.loadAppData()
+  loadPageSync: function loadPageSync(rawPath) {
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    return instance.loadPageSync(rawPath, options);
+  },
+  prefetch: function prefetch(rawPath) {
+    return instance.prefetch(rawPath);
+  },
+  isPageNotFound: function isPageNotFound(rawPath) {
+    return instance.isPageNotFound(rawPath);
+  },
+  hovering: function hovering(rawPath) {
+    return instance.hovering(rawPath);
+  },
+  loadAppData: function loadAppData() {
+    return instance.loadAppData();
+  }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (publicLoader);
 function getStaticQueryResults() {
@@ -44963,14 +45115,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (path => {
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (path) {
   if (path === undefined) {
     return path;
   }
-  if (path === `/`) {
-    return `/`;
+  if (path === "/") {
+    return "/";
   }
-  if (path.charAt(path.length - 1) === `/`) {
+  if (path.charAt(path.length - 1) === "/") {
     return path.slice(0, -1);
   }
   return path;
@@ -44989,13 +45141,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-const support = function (feature) {
-  if (typeof document === `undefined`) {
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+var support = function support(feature) {
+  if ((typeof document === "undefined" ? "undefined" : _typeof(document)) === "undefined") {
     return false;
   }
-  const fakeLink = document.createElement(`link`);
+  var fakeLink = document.createElement("link");
   try {
-    if (fakeLink.relList && typeof fakeLink.relList.supports === `function`) {
+    if (fakeLink.relList && _typeof(fakeLink.relList.supports) === "function") {
       return fakeLink.relList.supports(feature);
     }
   } catch (err) {
@@ -45003,29 +45156,29 @@ const support = function (feature) {
   }
   return false;
 };
-const linkPrefetchStrategy = function (url, options) {
-  return new Promise((resolve, reject) => {
-    if (typeof document === `undefined`) {
+var linkPrefetchStrategy = function linkPrefetchStrategy(url, options) {
+  return new Promise(function (resolve, reject) {
+    if ((typeof document === "undefined" ? "undefined" : _typeof(document)) === "undefined") {
       reject();
       return;
     }
-    const link = document.createElement(`link`);
-    link.setAttribute(`rel`, `prefetch`);
-    link.setAttribute(`href`, url);
-    Object.keys(options).forEach(key => {
+    var link = document.createElement("link");
+    link.setAttribute("rel", "prefetch");
+    link.setAttribute("href", url);
+    Object.keys(options).forEach(function (key) {
       link.setAttribute(key, options[key]);
     });
     link.onload = resolve;
     link.onerror = reject;
-    const parentElement = document.getElementsByTagName(`head`)[0] || document.getElementsByName(`script`)[0].parentNode;
+    var parentElement = document.getElementsByTagName("head")[0] || document.getElementsByName("script")[0].parentNode;
     parentElement.appendChild(link);
   });
 };
-const xhrPrefetchStrategy = function (url) {
-  return new Promise((resolve, reject) => {
-    const req = new XMLHttpRequest();
-    req.open(`GET`, url, true);
-    req.onload = () => {
+var xhrPrefetchStrategy = function xhrPrefetchStrategy(url) {
+  return new Promise(function (resolve, reject) {
+    var req = new XMLHttpRequest();
+    req.open("GET", url, true);
+    req.onload = function () {
       if (req.status === 200) {
         resolve();
       } else {
@@ -45035,18 +45188,18 @@ const xhrPrefetchStrategy = function (url) {
     req.send(null);
   });
 };
-const supportedPrefetchStrategy = support(`prefetch`) ? linkPrefetchStrategy : xhrPrefetchStrategy;
-const preFetched = {};
-const prefetch = function (url, options) {
-  return new Promise(resolve => {
+var supportedPrefetchStrategy = support("prefetch") ? linkPrefetchStrategy : xhrPrefetchStrategy;
+var preFetched = {};
+var prefetch = function prefetch(url, options) {
+  return new Promise(function (resolve) {
     if (preFetched[url]) {
       resolve();
       return;
     }
-    supportedPrefetchStrategy(url, options).then(() => {
+    supportedPrefetchStrategy(url, options).then(function () {
       resolve();
       preFetched[url] = true;
-    }).catch(() => {}); // 404s are logged to the console anyway
+    })["catch"](function () {}); // 404s are logged to the console anyway
   });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (prefetch);
@@ -45059,9 +45212,13 @@ const prefetch = function (url, options) {
   \****************************************/
 /***/ ((module) => {
 
-const preferDefault = m => m && m.default || m;
+var preferDefault = function preferDefault(m) {
+  return m && m["default"] || m;
+};
 if (false) {} else if (false) {} else {
-  module.exports = () => null;
+  module.exports = function () {
+    return null;
+  };
 }
 
 /***/ }),
@@ -45072,7 +45229,9 @@ if (false) {} else if (false) {} else {
   \*******************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
-exports.polyfill = Component => Component;
+exports.polyfill = function (Component) {
+  return Component;
+};
 
 /***/ }),
 
@@ -45092,9 +45251,9 @@ __webpack_require__.r(__webpack_exports__);
 
 // Convert to a map for faster lookup in maybeRedirect()
 
-const redirectMap = new Map();
-const redirectIgnoreCaseMap = new Map();
-_redirects_json__WEBPACK_IMPORTED_MODULE_0__.forEach(redirect => {
+var redirectMap = new Map();
+var redirectIgnoreCaseMap = new Map();
+_redirects_json__WEBPACK_IMPORTED_MODULE_0__.forEach(function (redirect) {
   if (redirect.ignoreCase) {
     redirectIgnoreCaseMap.set(redirect.fromPath, redirect);
   } else {
@@ -45102,7 +45261,7 @@ _redirects_json__WEBPACK_IMPORTED_MODULE_0__.forEach(redirect => {
   }
 });
 function maybeGetBrowserRedirect(pathname) {
-  let redirect = redirectMap.get(pathname);
+  var redirect = redirectMap.get(pathname);
   if (!redirect) {
     redirect = redirectIgnoreCaseMap.get(pathname.toLowerCase());
   }
@@ -45127,14 +45286,15 @@ __webpack_require__.r(__webpack_exports__);
  * isn't found.
  */
 
-function stripPrefix(str, prefix = ``) {
+function stripPrefix(str) {
+  var prefix = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "";
   if (!prefix) {
     return str;
   }
   if (str === prefix) {
-    return `/`;
+    return "/";
   }
-  if (str.startsWith(`${prefix}/`)) {
+  if (str.startsWith("".concat(prefix, "/"))) {
     return str.slice(prefix.length);
   }
   return str;
@@ -66359,7 +66519,7 @@ module.exports = /*#__PURE__*/JSON.parse('{"v0.8":{"start":"2012-06-25","end":"2
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"name":"gatsby-material-typescript-starter","description":"A simple starter using Typescript & Material-ui","version":"0.1.0","homepage":"https://gatsby-material-typescript-starter.vercel.app","author":{"name":"Christian Lindeneg","email":"hi@lindeneg.org","url":"https://lindeneg.org"},"keywords":["gatsby","gatsby-plugin","typescript","eslint","prettier","material-ui"],"license":"(MIT OR 0BSD)","scripts":{"build":"gatsby build","develop":"gatsby develop","start":"yarn run develop","serve":"gatsby serve","clean":"gatsby clean","style":"yarn run style:format && yarn run style:lint","style:lint":"yarn eslint ./src --cache --config ./.eslintrc.json","style:format":"yarn prettier ./src --check --config ./.prettierrc","style:fix":"yarn prettier ./src --write --config ./.prettierrc","test":"echo \\"Write tests! -> https://gatsby.dev/unit-testing\\" && exit 1"},"dependencies":{"@emotion/styled":"^11.11.5","@material-ui/core":"^4.11.4","@mui/material":"^5.15.15","deepmerge":"^4.2.2","gatsby":"^3.4.2","gatsby-plugin-layout":"^2.4.0","gatsby-plugin-manifest":"^3.4.0","gatsby-plugin-material-ui":"^3.0.1","gatsby-plugin-offline":"^4.4.0","gatsby-plugin-react-helmet":"^4.4.0","gatsby-plugin-typescript":"^3.4.0","react":"^17.0.2","react-dom":"^17.0.2","react-helmet":"^6.1.0","react-icons":"^4.2.0"},"devDependencies":{"@types/react":"^17.0.5","@types/react-dom":"^17.0.3","@types/react-helmet":"^6.1.1","@typescript-eslint/eslint-plugin":"^4.22.1","@typescript-eslint/parser":"^4.22.1","eslint":"^7.26.0","eslint-plugin-react":"^7.23.2","eslint-plugin-react-hooks":"^4.2.0","prettier":"^2.2.1","typescript":"^4.2.4"},"resolutions":{"postcss":"^8.2.12","cssnano":"^5.0.2"},"repository":{"type":"git","url":"https://github.com/Lindeneg/gatsby-material-typescript-starter"},"bugs":{"url":"https://github.com/Lindeneg/gatsby-material-typescript-starter/issues"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"gatsby-material-typescript-starter","description":"A simple starter using Typescript & Material-ui","version":"0.1.0","author":{"name":"Ryan Leach"},"keywords":["gatsby","gatsby-plugin","typescript","eslint","prettier","material-ui"],"license":"(MIT OR 0BSD)","scripts":{"build":"gatsby build","develop":"gatsby develop","start":"yarn run develop","serve":"gatsby serve","clean":"gatsby clean","style":"yarn run style:format && yarn run style:lint","style:lint":"yarn eslint ./src --cache --config ./.eslintrc.json","style:format":"yarn prettier ./src --check --config ./.prettierrc","style:fix":"yarn prettier ./src --write --config ./.prettierrc","test":"jest","test:watch":"jest --watch"},"dependencies":{"@emotion/styled":"^11.11.5","@material-ui/core":"^4.11.4","@mui/material":"^5.15.15","deepmerge":"^4.2.2","gatsby":"^3.4.2","gatsby-plugin-layout":"^2.4.0","gatsby-plugin-manifest":"^3.4.0","gatsby-plugin-material-ui":"^3.0.1","gatsby-plugin-offline":"^4.4.0","gatsby-plugin-react-helmet":"^4.4.0","gatsby-plugin-typescript":"^3.4.0","react":"^17.0.2","react-dom":"^17.0.2","react-helmet":"^6.1.0","react-icons":"^4.2.0"},"devDependencies":{"@babel/core":"^7.24.4","@babel/preset-env":"^7.24.4","@babel/preset-react":"^7.24.1","@babel/preset-typescript":"^7.24.1","@testing-library/react":"^11.2.7","@types/react":"^17.0.5","@types/react-dom":"^17.0.3","@types/react-helmet":"^6.1.1","@types/react-test-renderer":"^18.0.7","@typescript-eslint/eslint-plugin":"^4.22.1","@typescript-eslint/parser":"^4.22.1","babel-jest":"^29.7.0","eslint":"^7.26.0","eslint-plugin-react":"^7.23.2","eslint-plugin-react-hooks":"^4.2.0","jest":"^29.7.0","jest-environment-jsdom":"^29.7.0","prettier":"^2.2.1","react-test-renderer":"^17.0.2","ts-jest":"^29.1.2","typescript":"^4.2.4"},"resolutions":{"postcss":"^8.2.12","cssnano":"^5.0.2"}}');
 
 /***/ })
 
@@ -66462,6 +66622,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom_server__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _api_runner_ssr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./api-runner-ssr */ "./.cache/api-runner-ssr.js");
 
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 /* global BROWSER_ESM_ONLY */
 
 
@@ -66470,109 +66636,113 @@ __webpack_require__.r(__webpack_exports__);
 // For some extremely mysterious reason, webpack adds the above module *after*
 // this module so that when this code runs, testRequireError is undefined.
 // So in the meantime, we'll just inline it.
-const testRequireError = (moduleName, err) => {
-  const regex = new RegExp(`Error: Cannot find module\\s.${moduleName}`);
-  const firstLine = err.toString().split(`\n`)[0];
+var testRequireError = function testRequireError(moduleName, err) {
+  var regex = new RegExp("Error: Cannot find module\\s.".concat(moduleName));
+  var firstLine = err.toString().split("\n")[0];
   return regex.test(firstLine);
 };
-let Html;
+var Html;
 try {
   Html = __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module '../src/html'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 } catch (err) {
-  if (testRequireError(`../src/html`, err)) {
+  if (testRequireError("../src/html", err)) {
     Html = __webpack_require__(/*! ./default-html */ "./.cache/default-html.js");
   } else {
-    console.log(`There was an error requiring "src/html.js"\n\n`, err, `\n\n`);
+    console.log("There was an error requiring \"src/html.js\"\n\n", err, "\n\n");
     process.exit();
   }
 }
-Html = Html && Html.__esModule ? Html.default : Html;
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (({
-  pagePath
-}) => {
-  let headComponents = [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("meta", {
+Html = Html && Html.__esModule ? Html["default"] : Html;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function (_ref) {
+  var pagePath = _ref.pagePath;
+  var headComponents = [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("meta", {
     key: "environment",
     name: "note",
     content: "environment=development"
   })];
-  let htmlAttributes = {};
-  let bodyAttributes = {};
-  let preBodyComponents = [];
-  let postBodyComponents = [];
-  let bodyProps = {};
-  let htmlStr;
-  const setHeadComponents = components => {
+  var htmlAttributes = {};
+  var bodyAttributes = {};
+  var preBodyComponents = [];
+  var postBodyComponents = [];
+  var bodyProps = {};
+  var htmlStr;
+  var setHeadComponents = function setHeadComponents(components) {
     headComponents = headComponents.concat(components);
   };
-  const setHtmlAttributes = attributes => {
+  var setHtmlAttributes = function setHtmlAttributes(attributes) {
     htmlAttributes = lodash_merge__WEBPACK_IMPORTED_MODULE_0___default()(htmlAttributes, attributes);
   };
-  const setBodyAttributes = attributes => {
+  var setBodyAttributes = function setBodyAttributes(attributes) {
     bodyAttributes = lodash_merge__WEBPACK_IMPORTED_MODULE_0___default()(bodyAttributes, attributes);
   };
-  const setPreBodyComponents = components => {
+  var setPreBodyComponents = function setPreBodyComponents(components) {
     preBodyComponents = preBodyComponents.concat(components);
   };
-  const setPostBodyComponents = components => {
+  var setPostBodyComponents = function setPostBodyComponents(components) {
     postBodyComponents = postBodyComponents.concat(components);
   };
-  const setBodyProps = props => {
+  var setBodyProps = function setBodyProps(props) {
     bodyProps = lodash_merge__WEBPACK_IMPORTED_MODULE_0___default()({}, bodyProps, props);
   };
-  const getHeadComponents = () => headComponents;
-  const replaceHeadComponents = components => {
+  var getHeadComponents = function getHeadComponents() {
+    return headComponents;
+  };
+  var replaceHeadComponents = function replaceHeadComponents(components) {
     headComponents = components;
   };
-  const getPreBodyComponents = () => preBodyComponents;
-  const replacePreBodyComponents = components => {
+  var getPreBodyComponents = function getPreBodyComponents() {
+    return preBodyComponents;
+  };
+  var replacePreBodyComponents = function replacePreBodyComponents(components) {
     preBodyComponents = components;
   };
-  const getPostBodyComponents = () => postBodyComponents;
-  const replacePostBodyComponents = components => {
+  var getPostBodyComponents = function getPostBodyComponents() {
+    return postBodyComponents;
+  };
+  var replacePostBodyComponents = function replacePostBodyComponents(components) {
     postBodyComponents = components;
   };
-  (0,_api_runner_ssr__WEBPACK_IMPORTED_MODULE_3__.apiRunner)(`onRenderBody`, {
-    setHeadComponents,
-    setHtmlAttributes,
-    setBodyAttributes,
-    setPreBodyComponents,
-    setPostBodyComponents,
-    setBodyProps,
+  (0,_api_runner_ssr__WEBPACK_IMPORTED_MODULE_3__.apiRunner)("onRenderBody", {
+    setHeadComponents: setHeadComponents,
+    setHtmlAttributes: setHtmlAttributes,
+    setBodyAttributes: setBodyAttributes,
+    setPreBodyComponents: setPreBodyComponents,
+    setPostBodyComponents: setPostBodyComponents,
+    setBodyProps: setBodyProps,
     pathname: pagePath
   });
-  (0,_api_runner_ssr__WEBPACK_IMPORTED_MODULE_3__.apiRunner)(`onPreRenderHTML`, {
-    getHeadComponents,
-    replaceHeadComponents,
-    getPreBodyComponents,
-    replacePreBodyComponents,
-    getPostBodyComponents,
-    replacePostBodyComponents,
+  (0,_api_runner_ssr__WEBPACK_IMPORTED_MODULE_3__.apiRunner)("onPreRenderHTML", {
+    getHeadComponents: getHeadComponents,
+    replaceHeadComponents: replaceHeadComponents,
+    getPreBodyComponents: getPreBodyComponents,
+    replacePreBodyComponents: replacePreBodyComponents,
+    getPostBodyComponents: getPostBodyComponents,
+    replacePostBodyComponents: replacePostBodyComponents,
     pathname: pagePath
   });
-  const htmlElement = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(Html, {
-    ...bodyProps,
-    body: ``,
+  var htmlElement = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(Html, _objectSpread(_objectSpread({}, bodyProps), {}, {
+    body: "",
     headComponents: headComponents.concat([/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("script", {
-      key: `io`,
+      key: "io",
       src: "/socket.io/socket.io.js"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("link", {
       key: "styles",
       rel: "stylesheet",
       href: "/commons.css"
     })]),
-    htmlAttributes,
-    bodyAttributes,
-    preBodyComponents,
+    htmlAttributes: htmlAttributes,
+    bodyAttributes: bodyAttributes,
+    preBodyComponents: preBodyComponents,
     postBodyComponents: postBodyComponents.concat([ false && /*#__PURE__*/0, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("script", {
-      key: `framework`,
+      key: "framework",
       src: "/framework.js"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("script", {
-      key: `commons`,
+      key: "commons",
       src: "/commons.js"
     })].filter(Boolean))
-  });
+  }));
   htmlStr = (0,react_dom_server__WEBPACK_IMPORTED_MODULE_2__.renderToStaticMarkup)(htmlElement);
-  htmlStr = `<!DOCTYPE html>${htmlStr}`;
+  htmlStr = "<!DOCTYPE html>".concat(htmlStr);
   return htmlStr;
 });
 })();
